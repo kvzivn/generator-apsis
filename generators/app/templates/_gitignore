@@ -1,0 +1,21 @@
+GIT IGNORE
+# GENERATED FILES #
+###################
+src/**/*.css
+coverage/
+
+# PACKAGES #
+############
+node_modules
+jspm_packages
+
+# IGNORED TYPES #
+#################
+*.map
+*.log
+
+# OS GENERATED FILES #
+######################
+.DS_Store
+.DS_Store?
+.Spotlight-V100

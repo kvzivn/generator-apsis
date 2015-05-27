@@ -1,0 +1,16 @@
+{
+  "name": "generator-apsis",
+  "author": "Hampus Persson, hampus.persson@apsis.com",
+  "version": "1.0.0",
+  "description": "A generator for Apsis modules.",
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "path": "^0.11.14",
+    "yeoman-generator": "^0.17.7"
+  }
+}
