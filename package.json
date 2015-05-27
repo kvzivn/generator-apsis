@@ -3,6 +3,14 @@
   "author": "Hampus Persson, hampus.persson@apsis.com",
   "version": "1.0.0",
   "description": "A generator for Apsis modules.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hmps/anp-gulp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ApsisInternational/generator-apsis/issues"
+  },
   "files": [
     "app"
   ],
