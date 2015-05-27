@@ -1,1 +1,14 @@
-node_modules/
+# PACKAGES #
+############
+node_modules
+
+# IGNORED TYPES #
+#################
+*.map
+*.log
+
+# OS GENERATED FILES #
+######################
+.DS_Store
+.DS_Store?
+.Spotlight-V100
