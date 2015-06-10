@@ -27,21 +27,16 @@ module.exports = function karmaConfig(config) {
         // enable / disable colors in the output (reporters and logs)
         colors: true,
 
-        // list of files / patterns to load in the browser
-        files: [],
-
         jspm: {
+            config: 'jspm.conf.js',
             // Edit this to your needs
             loadFiles: [
-                'src/*.js',
-                'src/javascript/*.js',
                 'test/unit/**/*.js'
+            ],
+            serveFiles: [
+                'src/**/**'
             ]
         },
-
-        // proxies: {
-        //     '/base/src/javascript': '/src/javascript'
-        // },
 
         // list of files to exclude
         exclude: [],
