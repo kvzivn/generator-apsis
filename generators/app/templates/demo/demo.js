@@ -1,5 +1,5 @@
 import angular from 'angular';
 
-import example from 'src/example.module';
+import exampleModule from 'src/example.module';
 
-angular.module('demo', ['ng', example]);
+angular.module('demo', ['ng', exampleModule.name]);

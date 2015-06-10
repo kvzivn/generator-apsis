@@ -5,9 +5,7 @@ import exampleDirective from './javascript/example.directive';
 
 import './stylesheets/styles.css!';
 
-var moduleName = 'Apsis.modules.example';
-
-angular.module(moduleName, ['ng'])
+var moduleName = angular.module('Apsis.modules.example', ['ng'])
     .controller('ExampleController', ExampleCtrl)
     .directive('apsisExampleDirective', exampleDirective);
 
