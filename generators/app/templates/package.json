@@ -11,8 +11,7 @@
   },
   "devDependencies": {
     "anp-gulp": "^3.0.0",
-    "gulp": "^3.8.11",
-    "karma": "^0.12.31"
+    "gulp": "^3.8.11"
   },
   "jspm": {
     "main": "example.module.js",
