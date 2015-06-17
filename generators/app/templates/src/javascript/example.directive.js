@@ -12,13 +12,8 @@ function exampleDirective() {
     };
 
 
-    /////////////////////////////////////
-
-
     function directiveLink() {
         console.log('link');
     }
 
 }
-
-
