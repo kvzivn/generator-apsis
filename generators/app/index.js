@@ -1,4 +1,4 @@
-'use strict';
+/* jshint node: true */
 
 var yeoman = require('yeoman-generator');
 var path = require('path');
