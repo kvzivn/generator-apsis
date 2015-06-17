@@ -16,14 +16,26 @@ System.config({
 
 System.config({
   "map": {
-    "angular": "github:angular/bower-angular@1.3.15",
-    "babel": "npm:babel@4.7.16",
-    "babel-runtime": "npm:babel-runtime@4.7.16",
+    "angular": "github:angular/bower-angular@1.4.1",
+    "angular-mocks": "github:angular/bower-angular-mocks@1.4.0",
+    "babel": "npm:babel-core@5.5.8",
+    "babel-runtime": "npm:babel-runtime@5.5.8",
+    "core-js": "npm:core-js@0.9.17",
     "css": "github:systemjs/plugin-css@0.1.9",
     "image": "github:systemjs/plugin-image@0.1.0",
     "json": "github:systemjs/plugin-json@0.1.0",
-    "stylus-helpers": "apsis:stylus-helpers@1.0.2",
     "text": "github:systemjs/plugin-text@0.0.2",
+    "ui-components": "apsis:ui-components@1.2.2",
+    "apsis:ui-components@1.2.2": {
+      "css": "github:systemjs/plugin-css@0.1.9",
+      "text": "github:systemjs/plugin-text@0.0.2"
+    },
+    "github:angular-ui/ui-router@0.2.15": {
+      "angular": "github:angular/bower-angular@1.4.1"
+    },
+    "github:angular/bower-angular-mocks@1.4.0": {
+      "angular": "github:angular/bower-angular@1.4.1"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -76,7 +88,7 @@ System.config({
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
     },
-    "npm:babel-runtime@4.7.16": {
+    "npm:babel-runtime@5.5.8": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:buffer@3.1.2": {
@@ -102,6 +114,11 @@ System.config({
       "events": "github:jspm/nodelibs-events@0.1.0",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:core-js@0.9.17": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
     "npm:core-util-is@1.0.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
