@@ -35,8 +35,8 @@ module.exports = yeoman.generators.Base.extend({
 
         this.prompt(prompts, function (props) {
             this.appName = props.appName;
-            this.appAuthor = prop.appAuthor;
-            this.appDesc = prop.appDesc;
+            this.appAuthor = props.appAuthor;
+            this.appDesc = props.appDesc;
 
             done();
         }.bind(this));
