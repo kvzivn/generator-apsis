@@ -11,7 +11,11 @@
   },
   "devDependencies": {
     "anp-gulp": "^3.0.0",
-    "gulp": "^3.8.11"
+    "babel-eslint": "^4.0.10",
+    "eslint": "^1.2.0",
+    "gulp": "^3.8.11",
+    "jspm": "^0.16.0",
+    "jspm-git": "^0.3.3"
   },
   "jspm": {
     "main": "<%= moduleName %>.module.js",
@@ -29,8 +33,9 @@
       "text": "github:systemjs/plugin-text@^0.0.2"
     },
     "devDependencies": {
-      "babel": "npm:babel@^4.7.16",
-      "babel-runtime": "npm:babel-runtime@^4.7.16"
+      "babel": "npm:babel-core@^5.8.22",
+      "babel-runtime": "npm:babel-runtime@^5.8.20",
+      "core-js": "npm:core-js@^1.1.0"
     }
   }
 }
