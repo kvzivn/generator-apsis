@@ -1,7 +1,7 @@
 {
   "name": "generator-apsis",
   "author": "Hampus Persson, hampus.persson@apsis.com",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A generator for Apsis modules.",
   "license": "MIT",
   "bugs": {
