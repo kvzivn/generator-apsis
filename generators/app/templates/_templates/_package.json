@@ -1,7 +1,7 @@
 {
   "name": "apsis-<%= moduleName %>",
   "version": "1.0.0",
-  "description": "<%= appDesc %>",
+  "description": "<%= moduleDesc %>",
   "author": "<%= authorName %>",
   "private": true,
   "license": "ISC",
