@@ -18,13 +18,25 @@ module.exports = yeoman.generators.Base.extend({
         // have Yeoman greet the user
         console.log(this.yeoman);
 
-        var prompts = [{
-            name: 'appName',
-            message: 'What is your modules\'s name ?'
-        }];
+        var prompts = [
+            {
+                name: 'appName',
+                message: 'What is your modules\'s name?'
+            },
+            {
+                name: 'appAuthor',
+                message: 'What is the author\'s name?'
+            },
+            {
+                name: 'appDesc',
+                message: 'Give a brief description of your module.'
+            }
+        ];
 
         this.prompt(prompts, function (props) {
             this.appName = props.appName;
+            this.appAuthor = prop.appAuthor;
+            this.appDesc = prop.appDesc;
 
             done();
         }.bind(this));
@@ -32,19 +44,21 @@ module.exports = yeoman.generators.Base.extend({
     writing: {
         files: function() {
             var context = {
+                authorName: this.appAuthor,
+                moduleDesc: this.appDesc,
                 moduleName: this.appName,
                 ModuleName: this.appName.charAt(0).toUpperCase() + this.appName.slice(1)
             };
             // this.template('_editorconfig', '.editorconfig');
             this.template('_gitignore', '.gitignore');
-            this.template('_jscsrc', '.jscsrc');
-            this.template('_jshintrc', '.jshintrc');
+            this.template('_eslintrc', '.eslintrc');
             this.template('gulpfile.js');
             this.template('jspm.conf.js');
             this.template('_templates/_package.json', 'package.json', context);
             this.template('_templates/_moduleName.module.js', 'src/' + this.appName + '.module.js', context);
             this.template('_templates/_demo.js', 'demo/demo.js', context);
-            this.template('README.md');
+            this.template('_templates/_demo.js', 'demo/demo.js', context);
+            this.template('_templates/_README.js', 'README.md', context);
         },
         directories: function() {
             this.directory('demo');
