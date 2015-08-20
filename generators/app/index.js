@@ -52,7 +52,7 @@ module.exports = yeoman.generators.Base.extend({
             // this.template('_editorconfig', '.editorconfig');
             this.template('_gitignore', '.gitignore');
             this.template('_eslintrc', '.eslintrc');
-            this.template('gulpfile.js');
+            this.template('gulpfile.babel.js');
             this.template('jspm.conf.js');
             this.template('_templates/_package.json', 'package.json', context);
             this.template('_templates/_moduleName.module.js', 'src/' + this.appName + '.module.js', context);
