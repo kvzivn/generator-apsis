@@ -11,14 +11,16 @@
   },
   "devDependencies": {
     "anp-gulp": "^3.0.0",
+    "babel-core": "^5.8.22",
     "babel-eslint": "^4.0.10",
     "eslint": "^1.2.0",
-    "gulp": "^3.8.11",
+    "gulp": "^3.9.0",
     "jspm": "^0.16.0",
-    "jspm-git": "^0.3.3"
+    "jspm-git": "^0.3.3",
+    "strawpedo": "^0.1.2"
   },
   "jspm": {
-    "main": "<%= moduleName %>.module.js",
+    "main": "src/<%= moduleName %>.module.js",
     "directories": {
       "lib": "dist"
     },
