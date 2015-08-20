@@ -1,15 +1,20 @@
 /* eslint-env node */
 import { watch, serve, stylus, clean, eslint, sequence } from 'strawpedo';
-import nib from 'nib';
-import glob from 'glob';
 
-var stylusIncludePath = glob.sync(process.cwd() + '/jspm_packages/apsis/ui-components*/');
-var stylusImportPaths = [
-            'nib',
-            stylusIncludePath + 'helpers/*.styl',
-            stylusIncludePath + 'settings/*.styl'
-];
+// If you need nib and ui-components, install nib and glob via npm and uncomment
+// these lines.
 
+// import nib from 'nib';
+// import glob from 'glob';
+
+// let stylusIncludePath = glob.sync(process.cwd() + '/jspm_packages/apsis/ui-components*/');
+// let stylusImportPaths = [
+//             'nib',
+//             stylusIncludePath + 'helpers/*.styl',
+//             stylusIncludePath + 'settings/*.styl'
+// ];
+
+let stylusImportPaths = stylusIncludePath = '';
 
 sequence('default', [ 'clean', [ 'stylus', 'eslint' ], 'watch', 'serve' ]);
 
@@ -24,7 +29,7 @@ stylus({
     src: 'src/stylesheets/*.styl',
     dest: 'src/stylesheets',
     stylus: {
-        use: nib(),
+        // use: nib(),
         include: stylusIncludePath,
         import: stylusImportPaths,
         compress: false
