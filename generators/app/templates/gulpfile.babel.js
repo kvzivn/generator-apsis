@@ -12,9 +12,14 @@ import { watch, serve, stylus, clean, eslint, sequence } from 'strawpedo';
 //             'nib',
 //             stylusIncludePath + 'helpers/*.styl',
 //             stylusIncludePath + 'settings/*.styl'
-// ];
-
-let stylusImportPaths = stylusIncludePath = '';
+// ]
+//
+// stylusOptions = {
+    // use: nib(),
+    // include: stylusIncludePath,
+    // import: stylusImportPaths,
+    // compress: false
+// }
 
 sequence('default', [ 'clean', [ 'stylus', 'eslint' ], 'watch', 'serve' ]);
 
@@ -29,9 +34,6 @@ stylus({
     src: 'src/stylesheets/*.styl',
     dest: 'src/stylesheets',
     stylus: {
-        // use: nib(),
-        include: stylusIncludePath,
-        import: stylusImportPaths,
         compress: false
     }
 });
