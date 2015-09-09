@@ -1,5 +1,5 @@
 {
-  "name": "apsis-<%= moduleName %>",
+  "name": "apsis-ng-<%= moduleName %>",
   "version": "1.0.0",
   "description": "<%= moduleDesc %>",
   "author": "<%= authorName %>",
@@ -13,24 +13,23 @@
     "babel-core": "^5.8.22",
     "babel-eslint": "^4.0.10",
     "eslint": "^1.2.0",
+    "eslint-config-apsis": "0.0.4",
+    "glob": "^5.0.14",
     "gulp": "^3.9.0",
     "jspm": "^0.16.0",
     "jspm-git": "^0.3.3",
     "strawpedo": "^0.1.2"
   },
   "jspm": {
-    "main": "src/<%= moduleName %>.module.js",
+    "main": "<%= moduleName %>.module.js",
     "directories": {
       "lib": "dist"
     },
     "configFile": "jspm.conf.js",
     "dependencies": {
-      "angular": "github:angular/bower-angular@^1.4.0",
-      "angular-mocks": "github:angular/bower-angular-mocks@1.4.0",
       "css": "github:systemjs/plugin-css@^0.1.9",
       "image": "github:systemjs/plugin-image@^0.1.0",
       "json": "github:systemjs/plugin-json@^0.1.0",
-      "ui-components": "apsis:ui-components@^1.0.0",
       "text": "github:systemjs/plugin-text@^0.0.2"
     },
     "devDependencies": {
