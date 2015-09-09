@@ -1,8 +1,6 @@
-'use strict';
-
 import templateHtml from '../templates/example.tpl.html!text';
 
-export default exampleDirective;
+export { exampleDirective };
 
 function exampleDirective() {
     return {
