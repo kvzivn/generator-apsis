@@ -49,9 +49,9 @@ module.exports = yeoman.generators.Base.extend({
                 moduleName: this.appName,
                 ModuleName: this.appName.charAt(0).toUpperCase() + this.appName.slice(1)
             };
-            // this.template('_editorconfig', '.editorconfig');
             this.template('_gitignore', '.gitignore');
             this.template('_eslintrc', '.eslintrc');
+            this.template('_eslintignore', '.eslintignore');
             this.template('gulpfile.babel.js');
             this.template('jspm.conf.js');
             this.template('_templates/_package.json', 'package.json', context);
