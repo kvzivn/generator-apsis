@@ -18,7 +18,7 @@
     "gulp": "^3.9.0",
     "jspm": "^0.16.0",
     "jspm-git": "^0.3.3",
-    "strawpedo": "^0.1.2"
+    "strawpedo": "^1.0.0"
   },
   "jspm": {
     "main": "<%= moduleName %>.module.js",
