@@ -16,6 +16,6 @@
   ],
   "dependencies": {
     "path": "^0.11.14",
-    "yeoman-generator": "^0.17.7"
+    "yeoman-generator": "^0.20.3"
   }
 }
