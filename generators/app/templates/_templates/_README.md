@@ -1,3 +1,3 @@
 # <%= moduleName %>
 
-A module for Apsis.
+A <%= moduleName %> component for Apsis.

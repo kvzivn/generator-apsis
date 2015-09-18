@@ -64,15 +64,15 @@ serve({
         'src/javascript/*.js',
         'src/images/**/*',
         'src/templates/*.html',
-        'src/stylesheets/*.css'
+        'src/stylesheets/*.css',
     ],
     server: {
         baseDir: ['./'],
         middleware: (req, res, next) => {
             res.setHeader('Access-Control-Allow-Origin', '*');
             next();
-        }
-    }
+        },
+    },
 });
 
 

@@ -1,8 +1,8 @@
-import { exampleDirective } from './javascript/example.directive';
+import { <%= moduleName %>Directive } from './javascript/<%= moduleName %>.directive';
 
 import './stylesheets/styles.css!';
 
-var <%= moduleName %> = angular.module('Apsis.modules.<%= moduleName %>', ['ng'])
-    .directive('aExampleDirective', exampleDirective);
+const <%= moduleName %> = angular.module('Apsis.modules.<%= moduleName %>', ['ng'])
+    .directive('a<%= ModuleName %>Directive', <%= moduleName %>Directive);
 
 export { <%= moduleName %> };
