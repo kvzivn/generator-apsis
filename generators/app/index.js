@@ -52,14 +52,17 @@ module.exports = yeoman.generators.Base.extend({
             this.template('_gitignore', '.gitignore');
             this.template('_eslintrc', '.eslintrc');
             this.template('_eslintignore', '.eslintignore');
+            this.template('_templates/_tpl.html', 'src/templates/' + this.appName + '.tpl.html');
             this.template('gulpfile.babel.js');
             this.template('config.js');
             this.template('_templates/_package.json', 'package.json', context);
             this.template('_templates/_moduleName.module.js', 'src/' + this.appName + '.module.js', context);
+            this.template('_templates/_directive.js', 'src/javascript/' + this.appName + '.directive.js', context);
             this.template('_templates/_demo.js', 'demo/demo.js', context);
             this.template('_templates/_README.md', 'README.md', context);
         },
         directories: function() {
+            this.directory('.git');
             this.directory('demo');
             this.directory('src');
             this.directory('test');
