@@ -1,68 +1,52 @@
-'use strict';
-// Karma configuration
-
 module.exports = function karmaConfig(config) {
     config.set({
 
-        // base path that will be used to resolve all patterns (eg. files, exclude)
-        basePath: '..',
+        // The base path is one level up since this file is in ./test/
+        // If your karma.conf.js is in your project root, your basePath should
+        // be './'
+        basePath: '../',
 
-        // frameworks to use
-        // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
         frameworks: ['jspm', 'jasmine'],
 
-        // start these browsers
-        // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['Chrome'],
-
-        // test results reporter to use
-        // possible values: 'dots', 'progress'
-        // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress', 'verbose', 'coverage'],
-
-        // Continuous Integration mode
-        // if true, Karma captures browsers, runs the tests and exits
-        singleRun: true,
-
-        // enable / disable colors in the output (reporters and logs)
-        colors: true,
-
         jspm: {
-            config: 'jspm.conf.js',
-            // Edit this to your needs
             loadFiles: [
-                'test/unit/**/*.js'
+                'test/unit/**/*.js',
             ],
             serveFiles: [
-                'src/**/**'
-            ]
+                'src/**/*.js',
+                'src/**/*.html',
+            ],
         },
 
-        // list of files to exclude
-        exclude: [],
-
-        // level of logging
-        // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-        logLevel: config.LOG_INFO,
-
-        // preprocess matching files before serving them to the browser
-        // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'test/unit/**/*.js': ['babel', 'coverage']
+            'src/**/*.js': ['babel'],
+            'test/unit/**/*.js': ['babel'],
+            'jspm_packages/apsis/**/*.js': ['babel'],
         },
 
         babelPreprocessor: {
             options: {
-                sourceMap: 'inline',
-                modules: 'system'
-            }
+                modules: 'system',
+            },
         },
 
-        // optionally, configure the reporter
-        coverageReporter: {
-            type: 'html',
-            dir: 'coverage/'
-        }
+        proxies: {
+            '/test/': '/base/test/',
+            '/src/': '/base/src/',
+            '/jspm_packages/': '/base/jspm_packages/',
+        },
+
+        browsers: ['PhantomJS'],
+
+        reporters: ['progress', 'verbose', 'osx'],
+
+        singleRun: false,
+
+        colors: true,
+
+        exclude: [],
+
+        logLevel: config.LOG_ERROR,
 
     });
 };
