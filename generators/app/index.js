@@ -2,21 +2,15 @@
 
 var yeoman = require('yeoman-generator');
 var path = require('path');
+var logo = require('./apsis-logo');
 
 module.exports = yeoman.generators.Base.extend({
-    initializing: function() {
-        // this.sourceRoot(path.join(__dirname, '../../templates/app'));
-
-        // this.argument('appname', {type: String, required: false});
-        // this.appname = this.appname || path.basename(process.cwd());
-        // this.appname = this._.camelize(this._.slugify(
-        //     this._.humanize(this.appname)));
-    },
+    initializing: function() {},
     promptUser: function() {
         var done = this.async();
 
-        // have Yeoman greet the user
-        console.log(this.yeoman);
+        console.log(logo);
+        console.log('Hellu! Let\'s create your component!');
 
         var prompts = [
             {
