@@ -62,7 +62,7 @@ module.exports = yeoman.generators.Base.extend({
             this.template('_templates/_README.md', 'README.md', context);
         },
         directories: function() {
-            this.directory('.git');
+            this.directory('_git', '.git');
             this.directory('demo');
             this.directory('src');
             this.directory('test');
