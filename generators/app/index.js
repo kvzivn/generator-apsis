@@ -19,7 +19,7 @@ module.exports = yeoman.generators.Base.extend({
             },
             {
                 name: 'appAuthor',
-                message: 'What is the author\'s name?'
+                message: 'What is your name?'
             },
             {
                 name: 'appDesc',
