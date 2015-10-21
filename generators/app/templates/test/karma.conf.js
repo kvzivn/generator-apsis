@@ -40,8 +40,6 @@ module.exports = function karmaConfig(config) {
 
         reporters: ['progress', 'verbose', 'osx'],
 
-        singleRun: false,
-
         colors: true,
 
         exclude: [],
